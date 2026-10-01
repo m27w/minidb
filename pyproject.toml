@@ -1,0 +1,18 @@
+[project]
+name = "minidb"
+version = "0.1.0"
+description = "A small relational database engine: SQL parser, B+ tree indexes and a cost-based query planner."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Matthew Wright" }]
+license = { text = "MIT" }
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+minidb = "minidb.__main__:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "minidb"]
+addopts = "--doctest-modules"
